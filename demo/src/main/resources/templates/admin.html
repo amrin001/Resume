@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Amrin's CV</title>
+<link href="styles/base-template.css" rel="stylesheet">
+<link href="styles/admin-base-template.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="styles/order-form-design.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<br><br>
+	<div class="formbox">
+		<h1>ADMIN LOGIN</h1>
+		<form action="adminLogin" method="get">
+            <br><br>
+            <label>Username: </label>
+            <input type="text" name="adminUsername" required style="width: 25%; padding: 4px;">
+            <br><br>
+            <label>Password: </label>
+            <input type="password" name="adminPassword" required style="width: 25%; padding: 4px;">
+            <br><br>
+            <button class="button" type="submit">Login</button>
+            <a href="forgetPassword">
+            	<p style="text-align: right;">Forget Password</p>
+            </a>	
+            
+            <div style="color:red" th:if="${errorMessage != null}">
+				<span th:text="${errorMessage}"></span>
+			</div>
+            		
+		</form>
+	</div>
+
+</body>
+</html>

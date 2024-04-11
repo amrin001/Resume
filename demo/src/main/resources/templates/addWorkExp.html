@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Accept Cookies</title>
+<link href="styles/base-template.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="styles/order-form-design.css" rel="stylesheet">
+</head>
+<body>
+    
+
+    <br><br>
+    <form action="submitWorkExp" method="post">
+        <div class="formbox" style="height: auto; width: 520px;">
+            <h1>Add Work Experience</h1>
+            <!-- <p class="p">Pain is temporary, cookies are forever!</p> -->
+            <br><br>
+            <label>Company Name*:</label>
+            <br>
+            <input type="text" name="companyName" placeholder="Insert company name here" width="auto" required>
+            <br><br>
+            <label>Position*:</label>
+            <br>
+            <input type="text" name="positionTitle" placeholder="Insert position here" width="100%" required>
+            <br><br>
+            <label>Start Date*:</label>
+            <br>
+            <input type="date" name="startDate" placeholder="dd/mm/yyyy" width="100%" required>
+            <br><br>
+            <label>End Date*:</label>
+            <br>
+            <input type="date" name="endDate" placeholder="dd/mm/yyyy" width="100%">
+            <br><br>
+            <br><br>
+            <label>Description*:</label>
+            <br>
+            <input type="text" name="description" placeholder="Insert description here" width="auto" required>
+            <br><br>
+            <br>
+            <button class="button-74" type="submit" role="button">Submit</button>
+            <br><br>
+            <<!-- div th:if="${confirmation != null}">
+                <b><span th:text="${confirmation}"></span></b>
+            </div> -->
+            
+        </div>
+    </form>
+
+</body>
+</html>

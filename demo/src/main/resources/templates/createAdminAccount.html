@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Accept Cookies</title>
+<link href="styles/base-template.css" rel="stylesheet">
+<link href="styles/admin-base-template.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="styles/order-form-design.css" rel="stylesheet">
+</head>
+<body>
+
+    <br><br>
+    <div class="formbox" style="height: auto;">
+        <h1>Create Admin Account</h1>
+        <form action="creatingAdminAccount" method="post">
+            <br><br>
+            <label>Username: </label>
+            <input type="text" name="adminUsername" required style="width: 96%; padding: 4px;">
+            <br><br>
+            <label>First Name: </label>
+            <input type="text" name="firstName" required style="width: 96%; padding: 4px;">
+            <br><br>
+            <label>Last Name: </label>
+            <input type="text" name="lastName" required style="width: 96%; padding: 4px;">
+            <br><br>
+            <label>Password: </label>
+            <input type="password" name="adminPassword" required style="width: 96%; padding: 4px;">
+            <br><br>
+            <label>Retype Password: </label>
+            <input type="password" name="retypePassword" required style="width: 96%; padding: 4px;">
+            <br><br>
+            <label>Security Question: </label>
+            <select name="securityQuestion">
+                <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+                <option value="What is the name of your first school?">What is the name of your first school?</option>
+                <option value="What is your hobby?">What is your hobby?</option>
+                <option value="What was the model of your first car?">What was the model of your first car?</option>
+                <option value="What is one country you would like to visit?">What is one country you would like to visit?</option>
+                </select>
+            <br><br>
+            <label>Security Answer: </label>
+            <input type="text" name="securityAnswer" required style="width: 96%; padding: 4px;">
+            <br><br>
+            <button class="button" type="submit">Create Admin</button>
+
+            <div style="color:red" th:if="${errorMessage != null}">
+				<b><span th:text="${errorMessage}"></span></b>
+			</div>
+            <div style="color:black" th:if="${successMessage != null}">
+				<b><span th:text="${successMessage}"></span></b>
+			</div>
+        </form>
+        <div style="color:red" th:if="${errorMessage != null}">
+            <b><span th:text="${errorMessage}"></span></b>
+        </div>
+    </div>
+    
+</body>
+</html>

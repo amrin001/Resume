@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Accept Cookies</title>
+<link href="styles/base-template.css" rel="stylesheet">
+<link href="styles/admin-base-template.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="styles/order-form-design.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <h1 class="h1">WELCOME <span th:text="${name}"></span>!</h1>
+
+    <br><br>
+    <a href="changePassword">
+        <h1 class="h1" style="text-align: center;">Change password</h1>
+    </a>
+    <a href="addWorkExp">
+        <h1 class="h1" style="text-align: center;">Add Work Experience</h1>
+    </a>
+    
+</body>
+</html>
