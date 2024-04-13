@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Resume</title>
+</head>
+
+<body>
+
+	<h1>This page shows the resume</h1>
+	
+	<br><br>
+    <div>
+        <h1 class="h1">Work Experience</h1>
+        <br><br>
+        <table style="padding: 30px;">
+            <tr>
+                <th>Company Name</th>
+                <th>Position</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Description</th>
+            </tr>
+            <tr th:each="workExperience:${workExperience}" name="color">
+                <td th:text="${workExperience.companyName}" style="padding: 8px;"></td>
+                <td th:text="${workExperience.positionTitle}" style="padding: 8px;"></td>
+                <td th:text="${workExperience.startDate}" style="padding: 8px;"></td>
+                <td th:text="${workExperience.endDate}" style="padding: 8px;"></td>
+                <td th:text="${workExperience.description}" style="padding: 8px;"></td>
+            </tr>
+        </table>
+    </div>
+
+	<a href="index">
+		<p>Return</p>
+	</a>
+
+</body>

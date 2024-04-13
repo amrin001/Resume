@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,12 @@ public class WorkExperienceService {
 		return true;
 	}
 	
+	public List<WorkExperience> displayWorkExperience() {
+		return workExperienceRepository.findAll();
+	}
 	
+//	public String[] displayCoNames() {
+//		return workExperienceRepository.listCompanies();
+//	}
 
 }
